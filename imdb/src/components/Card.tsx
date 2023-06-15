@@ -11,7 +11,8 @@ export default function Card(props: CardProps){
     console.log();
    
     return (
-        <div className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200 group" key={props.result.id}>
+        <div className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md 
+        rounded-lg sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200 group" key={props.result.id}>
             
             <Link href={`/movie/${props.result.id}`}>
                 <Image src={`https://image.tmdb.org/t/p/original/${
