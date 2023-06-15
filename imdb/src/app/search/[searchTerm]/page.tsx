@@ -7,7 +7,7 @@ interface SearchPageProps{
 }
 
 export default async function SearchPage(props: SearchPageProps){
-    const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${props.searchTerm}&language=en-US&include_adult=false`);
+    const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${props.params.searchTerm}&language=en-US&include_adult=false`);
     if(!res.ok){
         throw new Error('Error fetching data');
     }
