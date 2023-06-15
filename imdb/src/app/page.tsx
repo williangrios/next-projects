@@ -2,7 +2,13 @@ import Results from "./components/Results";
 
 const API_KEY = process.env.API_KEY;
 
-export default async function Home(props) {
+interface HomeProps {
+  searchParams: {
+    genre?: string;
+  };
+}
+
+export default async function Home(props: HomeProps) {
   const genre = props.searchParams.genre || "fetchTrending";
   const query = `https://api.themoviedb.org/3/${
     genre === "fetchTopRated" ? "movie/top_rated" : "trending/all/week"
