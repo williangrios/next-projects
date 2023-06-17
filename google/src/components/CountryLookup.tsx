@@ -8,7 +8,7 @@ export default function CountryLookup() {
   useEffect(() => {
     async function getCountry() {
       await fetch(
-        `https://extreme-ip-lookup.com/json/?key=${process.env.NEXT_PUBLIC_API_KEY_EIL}`
+        `https://extreme-ip-lookup.com/json/?key=${process.env.NEXT_PUBLIC_API_KEY_EIL}` 
       )
         .then((res) => res.json())
         .then((data) =>  setLocation(`${data.city}, ${data.country}`));
