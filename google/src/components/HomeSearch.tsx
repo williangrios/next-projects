@@ -44,8 +44,20 @@ export default function HomeSearch() {
         <BsFillMicFill className="text-xl text-gray-700 mr-3" />
       </form>
       <div className="flex flex-col space-y-2 justify-center sm:space-y-0 sm:space-x-4 sm:flex-row mt-8">
-        <ButtonSearch onClick={handleSubmit} disabled={false}>Google Search</ButtonSearch>
-        <ButtonSearch onClick={randomSearch} disabled={randomSearchLoading}>{randomSearchLoading ? <img src='loading.svg' alt="Loading..." className="h-6 text-center" /> : 'I am felling lucky'}</ButtonSearch>
+        <ButtonSearch onClick={handleSubmit} disabled={false}>
+          Google Search
+        </ButtonSearch>
+        <ButtonSearch onClick={randomSearch} disabled={randomSearchLoading}>
+          {randomSearchLoading ? (
+            <img
+              src="loading.svg"
+              alt="Loading..."
+              className="h-6 text-center"
+            />
+          ) : (
+            "I am felling lucky"
+          )}
+        </ButtonSearch>
       </div>
     </>
   );
